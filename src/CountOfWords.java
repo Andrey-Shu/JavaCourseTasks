@@ -1,4 +1,4 @@
-public class CountOfWords_1 {
+public class CountOfWords {
     public static void main(String[] args) {
         String text = "qwerqw    eqwer  asdfsdf   ";
         String separator = "\\s+";
