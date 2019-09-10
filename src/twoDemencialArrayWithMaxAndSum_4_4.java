@@ -14,12 +14,12 @@ public class twoDemencialArrayWithMaxAndSum_4_4 {
             int num = random.nextInt(100);
             intArray[0][i] = num;
             for (int j = 0; j < y; j++) {
-                 num = random.nextInt(100);
+                num = random.nextInt(100);
                 intArray[i][j] = num;
-                System.out.print(intArray[i][j]+"\t");
-                sum = sum + intArray[i][j];
-                if (intArray[i][j]>maxValue){
-                    maxValue =intArray[i][j];
+                System.out.print(intArray[i][j] + "\t");
+                sum += intArray[i][j];
+                if (intArray[i][j] > maxValue) {
+                    maxValue = intArray[i][j];
                 }
             }
             System.out.println();
