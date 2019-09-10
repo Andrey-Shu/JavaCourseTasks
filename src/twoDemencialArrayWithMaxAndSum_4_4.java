@@ -17,9 +17,9 @@ public class twoDemencialArrayWithMaxAndSum_4_4 {
                  num = random.nextInt(100);
                 intArray[i][j] = num;
                 System.out.print(intArray[i][j]+"\t");
+                sum = sum + intArray[i][j];
                 if (intArray[i][j]>maxValue){
                     maxValue =intArray[i][j];
-                    sum = sum + intArray[i][j];
                 }
             }
             System.out.println();
