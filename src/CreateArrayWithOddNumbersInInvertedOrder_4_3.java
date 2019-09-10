@@ -1,10 +1,15 @@
 public class CreateArrayWithOddNumbersInInvertedOrder_4_3 {
     public static void main(String[] args) {
         int[] numbers = new int[100];
-        for (int i = 0; 0 < numbers.length + 1; i++) {
+        int[] result = new int[100];
+        for (int i = 0; i < 99; i++) {
             numbers[i] = i + 1;
-            if (numbers[i] % 2 == 0)
-                System.out.println(numbers[i]);
+            if (numbers[i] % 2 == 0) {
+                result[i] = numbers[i];
+  //              System.out.println(result[i]);
+            }
         }
+        for (int j = result.length - 1; j >= 0; j--)
+            System.out.println("test"+result[j]);
     }
 }
