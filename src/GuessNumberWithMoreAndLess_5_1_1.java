@@ -19,8 +19,8 @@ public class GuessNumberWithMoreAndLess_5_1_1 {
                     System.out.println("Number is bigger");
                 } else System.out.println("Number is less");
             }
-        } while (guessedNumber == inputNumber);
-//            System.out.println("You guessed!");
+        } while (guessedNumber != inputNumber);
+            System.out.println("You guessed!");
     }
 
 }
