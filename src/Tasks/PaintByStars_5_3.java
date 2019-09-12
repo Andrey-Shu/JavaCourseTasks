@@ -1,3 +1,5 @@
+package Tasks;
+
 public class PaintByStars_5_3 {
     public static void main(String[] args) {
         int x = 3;

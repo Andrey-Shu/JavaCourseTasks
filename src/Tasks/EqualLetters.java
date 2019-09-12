@@ -1,3 +1,5 @@
+package Tasks;
+
 public class EqualLetters {
     public static void main(String[] args) {
         String word = "qwerqwnn nn";

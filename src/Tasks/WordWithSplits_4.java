@@ -1,3 +1,5 @@
+package Tasks;
+
 public class WordWithSplits_4 {
     public static void main(String[] args) {
         String word = "word";

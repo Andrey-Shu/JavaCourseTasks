@@ -1,3 +1,5 @@
+package Tasks;
+
 public class StrindBuilberExample {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();

@@ -1,3 +1,5 @@
+package Tasks;
+
 public class PolindromeWordVerify_4_6 {
     public static void main(String[] args) {
         String word = "qweewq";

@@ -1,3 +1,5 @@
+package Tasks;
+
 public class CreateArrayWithOddNumbersInInvertedOrder_4_3 {
     public static void main(String[] args) {
         int[] numbers = new int[100];

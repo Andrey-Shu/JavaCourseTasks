@@ -1,3 +1,5 @@
+package Tasks;
+
 import java.util.Random;
 
 public class twoDemencialArrayWithMaxAndSum_4_4 {

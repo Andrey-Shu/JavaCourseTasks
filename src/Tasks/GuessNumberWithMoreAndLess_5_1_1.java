@@ -1,3 +1,5 @@
+package Tasks;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,7 +19,7 @@ public class GuessNumberWithMoreAndLess_5_1_1 {
             if (guessedNumber != inputNumber) {
                 if (guessedNumber > inputNumber) {
                     System.out.println("Number is bigger");
-                } else System.out.println("Number is less");
+                } else System.out.print("Number is less");
             }
         } while (guessedNumber != inputNumber);
             System.out.println("You guessed!");
