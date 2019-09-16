@@ -22,10 +22,14 @@ public class MainClassKvadrat {
                 int p = KvadratService.perimetrCalculation(kvadrat);
                 System.out.println("perimetr of square with side = " + kvadrat.getSideSquqreA() + " equal = " + p);
                 break;
+
+
             case 2:
                 int s = KvadratService.squareAreaCalculation(new Kvadrat(5));
                 System.out.println("square of area with side = " + kvadrat.getSideSquqreA() + " equal = " + s);
                 break;
+
+
             case 3:
                 Kvadrat arr[] = new Kvadrat[3];
                 arr[0]=new Kvadrat(6);
@@ -33,6 +37,9 @@ public class MainClassKvadrat {
                 arr[2]=new Kvadrat(8);
                 int sumPerim = KvadratService.sumOfPerimeters(arr);
                 System.out.println("summ of perimeters = " + sumPerim);
+
+
+
             case 4:
                 System.out.print("input count of square = ");
                 int countSquare = sc.nextInt();
