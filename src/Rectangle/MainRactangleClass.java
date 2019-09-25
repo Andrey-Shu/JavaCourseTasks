@@ -42,8 +42,12 @@ public class MainRactangleClass {
                 int result = s1 - s2;
                 System.out.println("diff reg = " + result);
                 break;
+
         }
+        System.out.println("test");
     }
+
+
 
     public static Rectangle chooseSides() {
         System.out.print("input side A = ");
