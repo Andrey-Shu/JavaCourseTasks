@@ -8,6 +8,7 @@ import java.util.*;
 
 public class EmployeeFactory {
     static Random rand = new Random();
+
     private static int id = 1;
 
     public static List<Employee> createEmployee(int amountOfEmplyee) {
@@ -19,7 +20,9 @@ public class EmployeeFactory {
             employee.setLastName(getRandomString());
             LocalDate bDay = employee.setBirthday(getRandomDate());
             employee.setAge(getCurrentYear()-bDay.getYear());
+            employee.setHobbies(Collections.singletonList(Hobbie.selectRandomHobby()));
             staff.add(employee);
+
         }
         return staff;
     }
