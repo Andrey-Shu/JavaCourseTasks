@@ -14,8 +14,12 @@ public class CompanyService {
     }
 
 
-    public int getCountOfEmpl() {
+    public int getCountOfEmpl() throws Exception {
+
         int count = company.getStaff().size();
+        if (count ==0){
+            throw new Exception("There are no eml");
+        }
 
         return count;
     }
@@ -27,8 +31,13 @@ public class CompanyService {
         return newEmpl;
     }
 
-    public Employee firedEmpl(int id) {
-        Employee firedId = company.getStaff().remove(id - 1);
+    public Employee firedEmpl(int id) throws Exception {
+        int counEml = company.getStaff().size();
+        if (id > counEml) {
+            throw new Exception("User not found");
+        }
+            Employee firedId = company.getStaff().remove(id - 1);
+
         return firedId;
     }
 
@@ -59,24 +68,41 @@ public class CompanyService {
         return employee;
     }
 
-    public Boolean isEmplPresentinCompany(int id) {
+//    public Boolean isEmplPresentinCompany(int id) {
+//        for (Employee e : company.getStaff()) {
+//
+//            if (e.getId() == id) {
+//                return true;
+//            }
+//
+//        }
+//        return false;
+//    }
+
+    public Boolean isEmplPresentinCompany(int id) throws Exception {
         for (Employee e : company.getStaff()) {
+
             if (e.getId() == id) {
                 return true;
             }
 
         }
-        return false;
+        throw new Exception("Empl is absent in company" );
     }
 
 
-    public Employee getEmpl(int id) {
+
+
+    public Employee getEmpl(int id) throws Exception {
         Employee employee = new Employee();
         for (Employee e : company.getStaff().subList(0, company.getStaff().size())) {
             int currentID = e.getId();
             if (currentID == id) {
                 employee = e;
             }
+        }
+        if (employee.getId() == 0){
+            throw new Exception("Empl with id = " + id + " is absent in company");
         }
         return employee;
 

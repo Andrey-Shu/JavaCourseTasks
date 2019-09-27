@@ -2,15 +2,17 @@ package ChotkiyStaff;
 
 import org.omg.CORBA.DATA_CONVERSION;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.SortedMap;
 
 public class MainClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 //        EmployeeFactory employeeFactory = new EmployeeFactory();
-        List<Employee> staff = EmployeeFactory.createEmployee(4);
+        List<Employee> staff = EmployeeFactory.createEmployee(10);
         printStaff(staff);
         System.out.println("===================================================");
         Company company = new Company();
@@ -28,7 +30,8 @@ public class MainClass {
         System.out.println("All staff:");
         printStaff(staff);
         System.out.println("===================================================");
-        Employee firedEmpl = companyService.firedEmpl(1);
+        Employee firedEmpl = null;
+        firedEmpl = companyService.firedEmpl(1);
         System.out.println("Fired empl: ");
         System.out.println(firedEmpl);
         System.out.println("");
@@ -48,17 +51,17 @@ public class MainClass {
         System.out.println("Age = " + olderEmpl.getAge());
         System.out.println("Hobby = " + olderEmpl.getHobbies());
         System.out.println("===================================================");
-        int idEmplIsPresent = 9;
-        System.out.print("Empl with id = "+idEmplIsPresent);
-        Boolean emplIsPresent = companyService.isEmplPresentinCompany(idEmplIsPresent);
+        int idEmplIsPresent = 2;
+        System.out.print("Empl with id = " + idEmplIsPresent);
+        Boolean emplIsPresent;
+        emplIsPresent = companyService.isEmplPresentinCompany(idEmplIsPresent);
         System.out.println(" is present in company: " + emplIsPresent);
         System.out.println("===================================================");
-        int idEmpl = 3;
-        System.out.println("Info about employee with id="+idEmpl);
+        int idEmpl = 12;
+        System.out.println("Info about employee with id=" + idEmpl);
         Employee infoEmpl = companyService.getEmpl(idEmpl);
         System.out.println(infoEmpl);
         System.out.println("===================================================");
-
 
 
     }
